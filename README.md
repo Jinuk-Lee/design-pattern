@@ -17,4 +17,4 @@ Chapter1 : [디자인 패턴의 소개와 전략 패턴](https://jinuk.notion.si
   - 패턴은 다른 개발자와의 의사소통을 극대화하는 역할을 합니다.
 
 
-Chapter2: [옵저버 패턴](https://jinuk.notion.site/Chapter2-bfc65c40d2b943d1a73c0a7c18351459)
+Chapter2 : [옵저버 패턴](https://jinuk.notion.site/Chapter2-bfc65c40d2b943d1a73c0a7c18351459)
