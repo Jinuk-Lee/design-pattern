@@ -12,23 +12,23 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 		weatherData.registerObserver(this);
 	}
 
-	public void update(float temp, float humidity, float pressure) {
-		tempSum += temp;
+	public void update() {
+		tempSum += weatherData.getTemperature();
 		numReadings++;
 
-		if (temp > maxTemp) {
-			maxTemp = temp;
+		if (weatherData.getTemperature() > maxTemp) {
+			maxTemp = weatherData.getTemperature();
 		}
- 
-		if (temp < minTemp) {
-			minTemp = temp;
+
+		if (weatherData.getTemperature() < minTemp) {
+			minTemp = weatherData.getTemperature();
 		}
 
 		display();
 	}
 
 	public void display() {
-		System.out.println("평균/최고/최저 온도= " + (tempSum / numReadings)
-			+ "/" + maxTemp + "/" + minTemp);
+		System.out.println("Avg/Max/Min temperature = " + (tempSum / numReadings)
+				+ "/" + maxTemp + "/" + minTemp);
 	}
 }
