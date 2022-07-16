@@ -1,4 +1,4 @@
-package Chapter2;
+package Chapter2.WeatherStation;
 
 public interface Subject {
 	public void registerObserver(Observer o);
