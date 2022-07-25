@@ -2,7 +2,7 @@ package Chapter3.starbuzz;
 
 public class HouseBlend extends Beverage {
 	public HouseBlend() {
-		description = "House Blend Coffee";
+		description = "하우스 블렌드 커피";
 	}
  
 	public double cost() {
