@@ -11,7 +11,7 @@ public class Singleton {
     }
 
     //getInstance() 메소드는 클래스의 인스턴스를 만들어서 리턴합니다.
-    public static Singleton getInstance() {
+    public static synchronized Singleton getInstance() {
         //인스턴스의 존재 여부를 판단하여 인스턴스를 리턴합니다.
         if (uniqueInstance == null) {
             uniqueInstance = new Singleton();
