@@ -1,5 +1,7 @@
 package Chapter12.adapter;
 
+import Chapter12.factory.QuackCounter;
+
 public class DuckSimulator {
 	public static void main(String[] args) {
 		DuckSimulator simulator = new DuckSimulator();
@@ -7,10 +9,10 @@ public class DuckSimulator {
 	}
 
 	void simulate() {
-		Quackable mallardDuck = new MallardDuck();
-		Quackable redheadDuck = new RedheadDuck();
-		Quackable duckCall = new DuckCall();
-		Quackable rubberDuck = new RubberDuck();
+		Quackable mallardDuck = new QuackCounter(new MallardDuck());
+		Quackable redheadDuck = new QuackCounter(new RedheadDuck());
+		Quackable duckCall = new QuackCounter(new DuckCall());
+		Quackable rubberDuck = new QuackCunter(new RubberDuck());
 		Quackable gooseDuck = new GooseAdapter(new Goose());
 
 		System.out.println("\nDuck Simulator: With Goose Adapter");
@@ -20,6 +22,8 @@ public class DuckSimulator {
 		simulate(duckCall);
 		simulate(rubberDuck);
 		simulate(gooseDuck);
+
+		System.out.println("오리가 소리 낸 횟수 : " + QuackCounter.getQuacks()+ " 번");
 	}
  
 	void simulate(Quackable duck) {
